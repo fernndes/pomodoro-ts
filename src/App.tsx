@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { PomodoroTimer } from './components/pomodoro-timer';
 
 function App(): JSX.Element {
+    useEffect(() => {
+        document.title = 'Pomodoro TS';
+    }, []);
     return (
         <div className="container">
             <PomodoroTimer
